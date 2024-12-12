@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('products_units', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('unit_id');
+            $table->unsignedBigInteger('product_id');  // `product_id` sẽ sử dụng `bigint`
+            $table->unsignedBigInteger('unit_id');  // `unit_id` cũng sẽ sử dụng `bigint`
             $table->integer('conversion_rate')->default(1); // Hệ số quy đổi
             $table->timestamps();
 

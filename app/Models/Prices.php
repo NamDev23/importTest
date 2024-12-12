@@ -10,11 +10,16 @@ class Prices extends Model
     use HasFactory;
     protected $fillable = [
         'product_id',
-        'import_price',
-        'sell_price',
-        'min_price',
-        'max_price',
-        'updated_at_price'
+        'purchase_price',
+        'sale_price',
+        'declared_price',
+        'cost_price',
+        'listed_price',
+        'specific_cost',
+        'hapu_price',
+        'hapu_price_updated',
+        'min_sale_price',
+        'max_sale_price',
     ];
     public function product()
     {

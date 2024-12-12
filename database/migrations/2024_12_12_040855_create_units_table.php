@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); //tên đơn vị
+            $table->string('name'); // Tên đơn vị
             $table->timestamps();
         });
     }

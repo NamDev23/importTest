@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('registrations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('product_id'); // `product_id` sử dụng `bigint`
             $table->string('certificate_no')->nullable(); // Số ĐKCL
             $table->text('details')->nullable(); // Thông tin chi tiết
             $table->timestamps();
