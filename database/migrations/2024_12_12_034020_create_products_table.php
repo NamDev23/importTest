@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('set null');
+            $table->timestamps();
         });
     }
 

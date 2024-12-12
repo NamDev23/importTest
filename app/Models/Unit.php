@@ -12,6 +12,6 @@ class Unit extends Model
 
     public function products()
     {
-        return $this->belongsToMany(Product::class, 'product_units')->withPivot('conversion_rate');
+        return $this->belongsToMany(Product::class, 'products_units')->withPivot('conversion_rate');
     }
 }

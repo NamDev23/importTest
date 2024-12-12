@@ -31,11 +31,15 @@ class Product extends Model
 
     public function units()
     {
-        return $this->belongsToMany(Unit::class, 'product_units')->withPivot('conversion_rate');
+        return $this->belongsToMany(Unit::class, 'products_units')->withPivot('conversion_rate');
     }
 
     public function prices()
     {
         return $this->hasOne(Prices::class);
+    }
+    public function storages()
+    {
+        return $this->belongsToMany(Storage::class, 'product_storage');
     }
 }

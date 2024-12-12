@@ -32,7 +32,7 @@
             </div>
             @endif
             <!-- Form import -->
-            <form action="{{ url('/import') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('products.import') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">

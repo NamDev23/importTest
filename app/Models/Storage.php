@@ -9,4 +9,8 @@ class Storage extends Model
 {
     use HasFactory;
     protected $fillable = ['code', 'name', 'location'];
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_storage');
+    }
 }
